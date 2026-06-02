@@ -1,16 +1,5 @@
     Blocking waiting for file lock on package cache
     Blocking waiting for file lock on package cache
-   0.151065600s  INFO prepare_target{force=false package_id=yao_core v0.1.0 (C:\1_yao_core) target="yao_core"}: cargo::core::compiler::fingerprint: stale: changed "C:\\1_yao_core\\src\\lib.rs"
-   0.151110600s  INFO prepare_target{force=false package_id=yao_core v0.1.0 (C:\1_yao_core) target="yao_core"}: cargo::core::compiler::fingerprint:           (vs) "C:\\1_yao_core\\target\\debug\\.fingerprint\\yao_core-fa532282907d2586\\dep-lib-yao_core"
-   0.151118000s  INFO prepare_target{force=false package_id=yao_core v0.1.0 (C:\1_yao_core) target="yao_core"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 13424864909, nanos: 963070000 } < FileTime { seconds: 13424864926, nanos: 955101800 }
-   0.151337600s  INFO prepare_target{force=false package_id=yao_core v0.1.0 (C:\1_yao_core) target="yao_core"}: cargo::core::compiler::fingerprint: fingerprint dirty for yao_core v0.1.0 (C:\1_yao_core)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("yao_core", ["lib"], "C:\\1_yao_core\\src\\lib.rs", Edition2021) }
-   0.151374900s  INFO prepare_target{force=false package_id=yao_core v0.1.0 (C:\1_yao_core) target="yao_core"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "C:\\1_yao_core\\target\\debug\\.fingerprint\\yao_core-fa532282907d2586\\dep-lib-yao_core", reference_mtime: FileTime { seconds: 13424864909, nanos: 963070000 }, stale: "C:\\1_yao_core\\src\\lib.rs", stale_mtime: FileTime { seconds: 13424864926, nanos: 955101800 } }))
-   0.165529600s  INFO prepare_target{force=false package_id=yao_core v0.1.0 (C:\1_yao_core) target="yao_core"}: cargo::core::compiler::fingerprint: stale: changed "C:\\1_yao_core\\src\\lib.rs"
-   0.165551800s  INFO prepare_target{force=false package_id=yao_core v0.1.0 (C:\1_yao_core) target="yao_core"}: cargo::core::compiler::fingerprint:           (vs) "C:\\1_yao_core\\target\\debug\\.fingerprint\\yao_core-cfeb183fe7889835\\dep-test-lib-yao_core"
-   0.165558800s  INFO prepare_target{force=false package_id=yao_core v0.1.0 (C:\1_yao_core) target="yao_core"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 13424864909, nanos: 963070000 } < FileTime { seconds: 13424864926, nanos: 955101800 }
-   0.165728200s  INFO prepare_target{force=false package_id=yao_core v0.1.0 (C:\1_yao_core) target="yao_core"}: cargo::core::compiler::fingerprint: fingerprint dirty for yao_core v0.1.0 (C:\1_yao_core)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("yao_core", ["lib"], "C:\\1_yao_core\\src\\lib.rs", Edition2021) }
-   0.165751000s  INFO prepare_target{force=false package_id=yao_core v0.1.0 (C:\1_yao_core) target="yao_core"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "C:\\1_yao_core\\target\\debug\\.fingerprint\\yao_core-cfeb183fe7889835\\dep-test-lib-yao_core", reference_mtime: FileTime { seconds: 13424864909, nanos: 963070000 }, stale: "C:\\1_yao_core\\src\\lib.rs", stale_mtime: FileTime { seconds: 13424864926, nanos: 955101800 } }))
-    Checking yao_core v0.1.0 (C:\1_yao_core)
-error: could not compile `yao_core` (lib) due to 7 previous errors; 3 warnings emitted
-warning: build failed, waiting for other jobs to finish...
-error: could not compile `yao_core` (lib test) due to 7 previous errors; 3 warnings emitted
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on shared package cache
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.48s
