@@ -1,6 +1,6 @@
 // 1_yao_core/src/parser.rs
 use regex::Regex;
-use std::fs;
+use serde::Serialize;
 use crate::math;
 
 pub struct YaoyorozuEngine {
@@ -9,7 +9,7 @@ pub struct YaoyorozuEngine {
 }
 
 /// コア側で定義する、解析済みのUI要素のデータ（これをゲーム側に渡す）
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize)]
 pub struct RawUiNode {
     pub tag: String,       // "区画", "ボタン" など
     pub name: String,      // 「メインメニュー」 などの名前
@@ -44,7 +44,7 @@ impl YaoyorozuEngine {
             
             if line.contains("//") || line.is_empty() {
                 i += 1;
-                /// 挑戦コード用文章はコメント用に先頭に // を付けるルールに配慮
+                // 挑戦コード用文章はコメント用に先頭に // を付けるルールに配慮
                 continue;
             }
 
@@ -80,6 +80,7 @@ impl YaoyorozuEngine {
         content.to_string()
     }
 
+    #[allow(dead_code)]
     fn condition_is_true(&self, condition: &str) -> bool {
         let condition = condition.trim();
         if condition == "ここがランチャーなら" { return self.is_launcher; }
@@ -90,6 +91,7 @@ impl YaoyorozuEngine {
         false
     }
     
+    #[allow(dead_code)]
     fn parse_number(&self, value: &str) -> Option<u32> {
         value.parse::<u32>().ok()
     }

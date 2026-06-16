@@ -34,7 +34,7 @@ pub fn evaluate_expression(expr: &str) -> Option<f64> {
     #[derive(Debug, Clone, Copy)]
     enum Op { Add, Sub, Mul, Div }
     #[derive(Debug, Clone)]
-    enum Token { Number(f64), Op(Op), LParen, RParen }
+    enum Token { Number(f64), Op(#[allow(dead_code)] Op), LParen, RParen }
 
     fn tokenize(expr: &str) -> Option<Vec<Token>> {
         let mut tokens = Vec::new();
