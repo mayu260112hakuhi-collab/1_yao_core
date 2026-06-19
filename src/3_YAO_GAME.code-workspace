@@ -5,6 +5,14 @@
 		},
 		{
 			"path": "../../3_yao_game"
+		},
+		{
+			"path": "../../ysmmo"
 		}
-	]
+	],
+	"extensions": {
+		"recommendations": [
+			"codeium.codeium"
+		]
+	}
 }
