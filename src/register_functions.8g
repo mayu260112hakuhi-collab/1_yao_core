@@ -1,0 +1,48 @@
+<s_8g;
+// 基礎的なUI要素をHTMLタグに変換する関数
+関数(区画) {
+    引数: 名前, プロパティ;
+    戻り値: "<div class='" + 名前 + "'>" + プロパティ + "</div>";
+}
+
+// ページタイトルを動的に注入する関数
+関数(get_title) {
+    戻り値: "八百万エディタ";
+}
+
+// 現在の時間を返す関数
+関数(get_time) {
+    // Rust側で時刻取得して返すイメージ
+    戻り値: "20:30";
+}
+e_8g;>
+
+// .8g 用の変換処理用構造体
+struct EightGScript {
+    content: String,
+}
+
+impl EightGScript {
+    // Rustのコード文字列に変換する関数
+    fn to_rust_code(&self) -> String {
+        format!("fn run() {{ println!(\"{}\"); }}", self.content)
+    }
+
+    // HTML文字列に変換する関数
+    fn to_html(&self) -> String {
+        format!("<html><body><p>{}</p></body></html>", self.content)
+    }
+}
+
+// 使用例
+fn main() {
+    let script = EightGScript {
+        content: "Hello, Yaoyorozu!".to_string(),
+    };
+
+    let rust_code = script.to_rust_code();
+    let html_code = script.to_html();
+
+    println!("Rust Code:\n{}", rust_code);
+    println!("\nHTML Code:\n{}", html_code);
+}
